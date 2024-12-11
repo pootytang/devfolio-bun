@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import {HeroSection, AboutMeSection, MyWorkSection, SkillsSection, ContactSection} from "$components";
+
+	const {data} = $props()
+	let { workExperience, projects, skills } = data
+</script>
+<HeroSection />
+<AboutMeSection {workExperience} />
+<MyWorkSection {projects} />
+<SkillsSection {skills} />
+<ContactSection />
